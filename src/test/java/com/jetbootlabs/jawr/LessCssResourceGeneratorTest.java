@@ -1,4 +1,4 @@
-package com.eliotsykes.jawr;
+package com.jetbootlabs.jawr;
 
 import static org.junit.Assert.*;
 

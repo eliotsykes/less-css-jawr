@@ -1,4 +1,4 @@
-package com.eliotsykes.jawr;
+package com.jetbootlabs.jawr;
 
 import net.jawr.web.resource.bundle.generator.ResourceGenerator;
 import net.jawr.web.resource.bundle.generator.GeneratorContext;
