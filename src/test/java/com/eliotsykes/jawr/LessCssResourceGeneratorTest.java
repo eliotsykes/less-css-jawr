@@ -20,5 +20,18 @@ public class LessCssResourceGeneratorTest {
         assertEquals(expectedCss, css);
     }
 
+    @Test
+    public void testNonStyleFileExtensionsThrowSecurityException() {
+        String[] nonStylePaths = {"WEB-INF/web.xml", "/some/path/secret.less.txt", "/tmp/moresecrets.css.yml"};
+        for (int i = 0; i < nonStylePaths.length; i++) {
+            String path = nonStylePaths[i];
+            try {
+                generator.generateCssFromLessFile(path);
+                fail("Exception should have been thrown for non-style path '" + path + "'");
+            } catch (SecurityException e) {
+            }
+        }
+    }
+
 
 }

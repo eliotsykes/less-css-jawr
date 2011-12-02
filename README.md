@@ -9,7 +9,7 @@ At time of writing, Less CSS for JAWR has been tested with JAWR 3.3.3. Also know
 with the Grails JAWR plugin (v3.3.3) and Grails 1.3.7. May work with other versions of all of those too.
 
 ## How to use
-Include the less-css-jawr jar on your webapp's classpath.
+Include the less-css-jawr jar and the Less CSS Engine jar (com.asual.lesscss.lesscss-engine, v1.1.4) on your webapp's classpath.
 
 Add the com.jetbootlabs.jawr.LessCssResourceGenerator to your custom generators, e.g.
 
