@@ -1,5 +1,7 @@
 # Less CSS for JAWR
 
+Project home: https://github.com/eliotsykes/less-css-jawr
+
 Gives the joy of Less CSS (http://lesscss.org) to JAWR (http://jawr.java.net).
 
 Works in both JAWR's debug and production modes. In JAWR's debug mode, changes to your .css and .less files are picked up
@@ -9,9 +11,10 @@ At time of writing, Less CSS for JAWR has been tested with JAWR 3.3.3. Also know
 with the Grails JAWR plugin (v3.3.3) and Grails 1.3.7. May work with other versions of all of those too.
 
 ## How to use
-Include the less-css-jawr jar and the Less CSS Engine jar (com.asual.lesscss.lesscss-engine, v1.1.4) on your webapp's classpath.
+Include the `less-css-jawr-[VERSION].jar` (find it in the same directory as this README) and the Less CSS Engine jar
+(com.asual.lesscss.lesscss-engine, v1.1.4) on your webapp's classpath.
 
-Add the com.jetbootlabs.jawr.LessCssResourceGenerator to your custom generators, e.g.
+Add the `com.jetbootlabs.jawr.LessCssResourceGenerator` to your custom generators, e.g.
 
     jawr.custom.generators=com.jetbootlabs.jawr.LessCssResourceGenerator,com.something.something.DarkSideGenerator
 
