@@ -23,8 +23,8 @@ Add the `com.jetbootlabs.jawr.LessCssResourceGenerator` to your custom generator
 
 Use the `less:` prefix with paths to your less files when defining JAWR bundles, e.g.
 
-    jawr.js.bundle.global.id=/bundles/global.js
-    jawr.js.bundle.global.mappings=less:path/to/style.less
+    jawr.css.bundle.global.id=/bundles/global.css
+    jawr.css.bundle.global.mappings=less:path/to/style.less
 
 
 ## Developing
