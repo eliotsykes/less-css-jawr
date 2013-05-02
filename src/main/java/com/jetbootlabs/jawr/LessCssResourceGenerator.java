@@ -34,7 +34,7 @@ public class LessCssResourceGenerator implements ResourceGenerator {
         if (null == resource) {
             throw new IllegalArgumentException("Less file not found at '" + pathToLessFile + "'");
         }
-        String css = generateCssFromLessFile(resource.getPath());
+        String css = generateCssFromLessFile(resource);
         return new StringReader(css);
     }
 
@@ -48,6 +48,19 @@ public class LessCssResourceGenerator implements ResourceGenerator {
             return css;
         } catch (LessException e) {
             throw new RuntimeException("Problem compiling Less CSS from file '" + path + "'", e);
+        }
+    }
+
+    public String generateCssFromLessFile(URL url) {
+        String path = url.toString();
+        if (!path.toLowerCase().endsWith(".less") && !path.toLowerCase().endsWith(".css")) {
+            throw new SecurityException("Attempt to read non-style URL '" + path + "' was made in an odd place, mmm...");
+        }
+        try {
+            String css = engine.compile(url);
+            return css;
+        } catch (LessException e) {
+            throw new RuntimeException("Problem compiling Less CSS from URL '" + path + "'", e);
         }
     }
 }
