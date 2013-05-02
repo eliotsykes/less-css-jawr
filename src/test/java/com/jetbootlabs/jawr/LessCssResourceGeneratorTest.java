@@ -17,7 +17,7 @@ public class LessCssResourceGeneratorTest {
                         "}" + lineSep;
         String pathToLessFile = "src/test/resources/test.less";
         String css = generator.generateCssFromLessFile(pathToLessFile);
-        assertEquals(expectedCss, css);
+        assertEquals(expectedCss.replaceAll("\r", ""), css.replaceAll("\r", ""));
     }
 
     @Test
